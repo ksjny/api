@@ -1,0 +1,230 @@
+{
+    "interactionModel":{
+        "languageModel":{
+            "types":[
+                {
+                    "name":"BODY_PART",
+                    "values":[
+                        {
+                            "id":null,
+                            "name":{
+                                "value":"Right Arm",
+                                "synonyms":[
+
+                                ]
+                            }
+                        },
+                        {
+                            "id":null,
+                            "name":{
+                                "value":"Left Arm",
+                                "synonyms":[
+
+                                ]
+                            }
+                        },
+                        {
+                            "id":null,
+                            "name":{
+                                "value":"Right Leg",
+                                "synonyms":[
+
+                                ]
+                            }
+                        },
+                        {
+                            "id":null,
+                            "name":{
+                                "value":"Left Leg",
+                                "synonyms":[
+
+                                ]
+                            }
+                        },
+                        {
+                            "id":null,
+                            "name":{
+                                "value":"Right Knee",
+                                "synonyms":[
+
+                                ]
+                            }
+                        },
+                        {
+                            "id":null,
+                            "name":{
+                                "value":"Left Knee",
+                                "synonyms":[
+
+                                ]
+                            }
+                        },
+                        {
+                            "id":null,
+                            "name":{
+                                "value":"Stomach",
+                                "synonyms":[
+
+                                ]
+                            }
+                        },
+                        {
+                            "id":null,
+                            "name":{
+                                "value":"Right Elbow",
+                                "synonyms":[
+
+                                ]
+                            }
+                        },
+                        {
+                            "id":null,
+                            "name":{
+                                "value":"Left Elbow",
+                                "synonyms":[
+
+                                ]
+                            }
+                        },
+                        {
+                            "id":null,
+                            "name":{
+                                "value":"Chest",
+                                "synonyms":[
+
+                                ]
+                            }
+                        },
+                        {
+                            "id":null,
+                            "name":{
+                                "value":"RIght Shoulder",
+                                "synonyms":[
+
+                                ]
+                            }
+                        },
+                        {
+                            "id":null,
+                            "name":{
+                                "value":"Left Shoulder",
+                                "synonyms":[
+
+                                ]
+                            }
+                        },
+                        {
+                            "id":null,
+                            "name":{
+                                "value":"Neck",
+                                "synonyms":[
+
+                                ]
+                            }
+                        },
+                        {
+                            "id":null,
+                            "name":{
+                                "value":"Groin",
+                                "synonyms":[
+
+                                ]
+                            }
+                        },
+                        {
+                            "id":null,
+                            "name":{
+                                "value":"Hip",
+                                "synonyms":[
+
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name":"SENSATION_FELT",
+                    "values":[
+                        {
+                            "id":null,
+                            "name":{
+                                "value":"Grinding",
+                                "synonyms":[
+
+                                ]
+                            }
+                        },
+                        {
+                            "id":null,
+                            "name":{
+                                "value":"Stabbing",
+                                "synonyms":[
+
+                                ]
+                            }
+                        },
+                        {
+                            "id":null,
+                            "name":{
+                                "value":"Burning",
+                                "synonyms":[
+
+                                ]
+                            }
+                        },
+                        {
+                            "id":null,
+                            "name":{
+                                "value":"Tingling",
+                                "synonyms":[
+
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ],
+            "intents":[
+                {
+                    "name":"AMAZON.CancelIntent",
+                    "samples":[
+
+                    ]
+                },
+                {
+                    "name":"AMAZON.HelpIntent",
+                    "samples":[
+
+                    ]
+                },
+                {
+                    "name":"AMAZON.StopIntent",
+                    "samples":[
+
+                    ]
+                },
+                {
+                    "name":"SymptomLoggerIntent",
+                    "slots":[
+                        {
+                            "name":"Part",
+                            "type":"BODY_PART"
+                        },
+                        {
+                            "name":"Sensation",
+                            "type":"SENSATION_FELT"
+                        },
+                        {
+                            "name":"Intensity",
+                            "type":"AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples":[
+                        "I feel a {Sensation} in my {Part} with a severity of {Intensity}"
+                    ]
+                }
+            ],
+            "invocationName":"mediprep"
+        }
+    }
+}
