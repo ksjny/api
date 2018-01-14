@@ -11,6 +11,12 @@ urlpatterns = [
 
     url('api/users$', views.user, name="user"),
     url('api/users/([0-9]+)$', views.user_id, name="user_id"),
+
+    url('api/symptoms$', views.symptom, name="symptom"),
+    url('api/symptoms/([0-9]+)$', views.symptom_id, name="symptom_id"),
+
+    url('api/medications$', views.medication, name="medication"),
+    url('api/medications/([0-9]+)$', views.medication_id, name="medication_id"),
 ]
 
 handler404 = 'views.custom404'
