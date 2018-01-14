@@ -54,9 +54,6 @@ def get_user(request):
     if not request.user.is_authenticated:
         return JsonResponse({'error': 'NOT_AUTHENTICATED'}, status=403)
 
-    if not request.user.permission == User.ADMIN:
-        return JsonResponse({'error': 'NOT_ADMIN'}, status=403)
-
     users = User.objects.filter()
     user_dicts = [x.to_dict() for x in users]
     return JsonResponse(user_dicts, safe=False)
@@ -67,9 +64,6 @@ def user_id(request, user_id):
 
     try:
         user = User.objects.get(id=user_id)
-
-        if not request.user.permission == User.ADMIN and not user == request.user:
-            return JsonResponse({'error': 'NO_PERMISSION'}, status=401)
 
     except User.DoesNotExist:
         return JsonResponse({'error': 'INVALID_USER'}, status=404)
