@@ -4,7 +4,7 @@ from . import User
 
 class Symptom(models.Model):
     location = models.CharField(max_length=120)
-    severity = models.CharField(max_length=120)
+    severity = models.IntegerField()
     pain_type = models.CharField(max_length=120)
     user = models.ForeignKey('User', on_delete=models.CASCADE)
 
