@@ -23,20 +23,26 @@ var handlers = {
         this.attributes['severity'] = intensity;
         this.attributes['user'] = 1;
 
-        var post_data = JSON.stringify(this.attributes);
+        const self=this;
         request({
-            url: "https://nwhacks-api.herokuapp.com/symptom",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            url: "https://nwhacks-api.herokuapp.com/api/symptom",
             method: "POST",
             json: true,
-            body: post_data
+            body: this.attributes
         }, function (error, response, body){
-            console.log("R:" + response);
+            if (!error) {
+                console.log("P: " + part + " S: " + sensation + " I: " + intensity);
+                console.log("D: " + body);
+                self.response.speak('Your symptom has been recorded thank you');
+                self.emit(':responseReady');
+            }
+            console.log("R:" + JSON.stringify(response));
         });
 
-        console.log("P: " + part + " S: " + sensation + " I: " + intensity);
-        console.log("D: " + post_data);
-        this.response.speak('Your symptom has been recorded thank you')
-        this.emit(':responseReady');
+
     },
     'SessionEndedRequest' : function() {
         console.log('Session ended with reason: ' + this.event.request.reason);
