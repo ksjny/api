@@ -17,6 +17,9 @@ urlpatterns = [
 
     url('api/medications$', views.medication, name="medication"),
     url('api/medications/([0-9]+)$', views.medication_id, name="medication_id"),
+
+    url('api/diagnosiss$', views.diagnosis, name="diagnosis"),
+    url('api/diagnosiss/([0-9]+)$', views.diagnosis_id, name="diagnosis_id"),
 ]
 
 handler404 = 'views.custom404'
