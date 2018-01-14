@@ -220,7 +220,7 @@
                         }
                     ],
                     "samples":[
-                        "My {Part}"
+                        "I feel a {Sensation} in my {Part} with a severity of {Intensity}"
                     ]
                 }
             ],

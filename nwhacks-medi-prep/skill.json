@@ -5,9 +5,8 @@
         "en-US": {
           "summary": "Sample Short Description",
           "examplePhrases": [
-            "Alexa open MediPrep",
-            "Alexa tell MediPrep my stomach is tingling. severity 2",
-            "Alexa tell MediPrep my shoulder is burning. severity 4"
+              "alexa tell mediprep i feel a burning sensation in my right knee with a severity of 3",
+              "alexa tell mediprep i feel a tingling sensation in my left shoulder with a severity of 1"
           ],
           "name": "nwhacks-medi-prep",
           "description": "Sample Full Description"
