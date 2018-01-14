@@ -2,3 +2,4 @@
 /nwhacks/secret_settings.py
 /nwhacks-medi-prep/lambda/custom/node_modules
 /node_modules
+**/*.pyc

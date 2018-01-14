@@ -1,16 +1,19 @@
-from django.conf.urls import url
-from django.conf import settings
-from django.conf.urls.static import static
+from logit import views
 
-from . import views
+from rest_framework import routers
+from dynamic_rest.routers import DynamicRouter
 
-app_name = 'logit'
+from django.urls import include, path
+
+router = DynamicRouter()
+
+router.register('users', views.UserViewSet)
+router.register('diagnosis', views.DiagnosisViewSet)
+router.register('medication', views.MedicationViewSet)
+router.register('symptom', views.SymptomViewSet)
+
 urlpatterns = [
-    url('api/authenticate$', views.authenticateuser, name="authenticateuser"),
-    url('api/logout$', views.signout, name="signout"),
-
-    url('api/users$', views.user, name="user"),
-    url('api/users/([0-9]+)$', views.user_id, name="user_id"),
+    path('', include(router.urls)),
+    path('classify/<int:user_id>', views.classify),
+    path('users/me/', views.UserViewSet.as_view({'get': 'retrieve'}), kwargs={'pk': 'me'}),
 ]
-
-handler404 = 'views.custom404'
