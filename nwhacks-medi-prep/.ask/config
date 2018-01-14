@@ -1,0 +1,19 @@
+{
+  "deploy_settings": {
+    "default": {
+      "skill_id": "amzn1.ask.skill.6db7c9a9-2b63-419b-9099-e63ea8706571",
+      "was_cloned": false,
+      "merge": {
+        "skillManifest": {
+          "apis": {
+            "custom": {
+              "endpoint": {
+                "uri": "ask-custom-nwhacks-medi-prep-default"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
