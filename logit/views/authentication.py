@@ -3,7 +3,6 @@ import json
 from django.shortcuts import HttpResponse
 
 from django.http import JsonResponse
-from django.views.decorators.csrf import csrf_protect
 
 from django.contrib.auth import authenticate, login, logout
 
@@ -17,7 +16,6 @@ def authenticateuser(request):
     else:
         return JsonResponse({'error': 'WRONG_METHOD'}, status=405)
 
-@csrf_protect
 def login_user(request):
     try:
         data = json.loads(request.body.decode('utf-8'))
