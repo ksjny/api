@@ -14,5 +14,6 @@ router.register('symptom', views.SymptomViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
+    path('classify/<int:user_id>', views.classify),
     path('users/me/', views.UserViewSet.as_view({'get': 'retrieve'}), kwargs={'pk': 'me'}),
 ]
