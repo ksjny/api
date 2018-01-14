@@ -15,7 +15,9 @@ class Medication(models.Model):
         return {
             'id': self.id,
             'name': self.name,
-            'timePeriod': self.time_period
+            'timePeriod': self.time_period,
+            'createdAt': self.created_at.isoformat(),
+            'updatedAt': self.updated_at.isoformat(),
         }
 
     def __str__(self):

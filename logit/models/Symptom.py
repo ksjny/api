@@ -18,6 +18,8 @@ class Symptom(models.Model):
             'location': self.location,
             'severity': self.severity,
             'pain_type': self.pain_type,
+            'createdAt': self.created_at.isoformat(),
+            'updatedAt': self.updated_at.isoformat(),
         }
 
     def __str__(self):

@@ -13,7 +13,9 @@ class Diagnosis(models.Model):
         return {
             'id': self.id,
             'name': self.name,
-            'severity': self.severity
+            'severity': self.severity,
+            'createdAt': self.created_at.isoformat(),
+            'updatedAt': self.updated_at.isoformat(),
         }
 
     def __str__(self):

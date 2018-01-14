@@ -1,3 +1,7 @@
 Django==2.0
 pytz==2017.3
 psycopg2==2.7.3.2
+django-filter==1.1.0
+djangorestframework==3.7.3
+djangorestframework-jwt==1.11.0
+dynamic-rest==1.6.7
